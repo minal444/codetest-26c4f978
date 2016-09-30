@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 namespace _10StringProblem
 {
-    class Program
+    public class Program
     {
         protected static string inputString; //input variable
         protected static long inputValue; //input variable after converting to Int64
@@ -20,7 +20,9 @@ namespace _10StringProblem
 
             try
             {
-                if (ValidateInput())
+                Console.WriteLine("Please enter the input string");
+                inputString = Console.ReadLine();
+                if (ValidateInput(inputString))
                 {
                     ProcessRequest();
                 }
@@ -90,13 +92,12 @@ namespace _10StringProblem
         /// validate user input
         /// </summary>
         /// <returns></returns>
-        private static bool ValidateInput()
+        public static bool ValidateInput(string inputValue)
         {
             try
             {
-                Console.WriteLine("Please enter the input string");
-                inputString = Console.ReadLine();
-                Match m = Regex.Match(inputString, @"^[0-9]+$");
+
+                Match m = Regex.Match(inputValue, @"^[0-9]+$");
                 return m.Success;
             }
             catch (Exception ex)
