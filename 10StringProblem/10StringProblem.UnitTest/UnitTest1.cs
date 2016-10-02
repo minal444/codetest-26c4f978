@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using _10StringProblem;
+using _10StringProblem.BusinessLogic;
 
 namespace _10StringProblem.UnitTest
 {
@@ -31,6 +32,7 @@ namespace _10StringProblem.UnitTest
         public void ValidateFriendlyNumber_Sucess()
         {
             Int64 inputNumber = 3523014;
+            //Int64 inputNumber = 2350;
             bool expectedResult = true;
             AlgoHelper algo = new AlgoHelper();
             bool actualResult = algo.ValidateFriendlyNess(inputNumber);

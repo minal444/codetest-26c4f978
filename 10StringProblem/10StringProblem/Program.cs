@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using _10StringProblem.BusinessLogic;
 namespace _10StringProblem
 {
     public class Program
@@ -20,15 +21,27 @@ namespace _10StringProblem
 
             try
             {
+
+                inputString=string.Empty; //input variable
+                inputValue=0; //input variable after converting to Int64
+                outputValues = new List<long>(); //output values for print
+
                 Console.WriteLine("Please enter the input string");
                 inputString = Console.ReadLine();
                 if (ValidateInput(inputString))
                 {
+                    //process request if input is valid
                     ProcessRequest();
                 }
                 PrintOutput();
-                Console.WriteLine(Environment.NewLine + "Press enter to close application");
-                Console.ReadLine();
+                Console.WriteLine(Environment.NewLine + "Press Esc to close Application" + Environment.NewLine + "Press any key to continue with new input");
+                if (Console.ReadKey(true).Key == ConsoleKey.Escape)//close on escape
+                    return;
+                else//loop back
+                {
+                    Console.WriteLine(Environment.NewLine + Environment.NewLine );
+                    Main(new string[1]);
+                }
             }
             catch (Exception ex)
             {
@@ -61,6 +74,8 @@ namespace _10StringProblem
                 sb.Append(", ");
 
             }
+            ///remove last comma
+            sb.Replace(',',' ',sb.ToString().Length-2,1);
             sb.Append("]");
             Console.WriteLine(sb.ToString());
         }

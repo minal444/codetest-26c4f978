@@ -4,8 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _10StringProblem
+
+
+
+
+namespace _10StringProblem.BusinessLogic
 {
+    
+    /// <summary>
+    /// Basic process of Algo 
+    /// input Number = iNumber
+    /// sub of number = iSum
+    /// while (inputnumber array size)
+    /// {
+    ///     get first digit
+    ///     iSum += iNumber
+    ///     if(isum==10)
+    ///         {
+    ///             Set some flag
+    ///             AddNextDigit()
+    ///             Loop Again
+    ///         }
+    ///     if(sum>10)
+    ///         {
+    ///             removefirstdigit()
+    ///             Loop Again
+    ///         }
+    ///     if(sum>10)
+    ///         {
+    ///             AddNextDigit()
+    ///             Loop Again
+    ///         }
+    ///         
+    /// }
+    /// 
+    /// </summary>
     public class AlgoHelper
     {
         private bool AddMore { get; set; }
@@ -30,6 +63,8 @@ namespace _10StringProblem
             long iNumberToValidate = arrDigits[0];
             if (arrDigits.Length < 2)//checking double digit only 
                 return false;
+            //loop through all digit of the number
+            // to do check while loop performence (once sample is working
             for (int i = 1; i < arrDigits.Length; i++)
             {
 

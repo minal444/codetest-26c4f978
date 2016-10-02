@@ -54,6 +54,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\10StringProblem.BusinessLogic\10StringProblem.BusinessLogic.csproj">
+      <Project>{b2952dec-2458-48dc-b5ce-8bac1d437928}</Project>
+      <Name>10StringProblem.BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\10StringProblem\10StringProblem.csproj">
       <Project>{7c441974-cefa-4886-b32a-c6ad72784b51}</Project>
       <Name>10StringProblem</Name>
