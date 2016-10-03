@@ -32,7 +32,6 @@ namespace _10StringProblem.UnitTest
         public void ValidateFriendlyNumber_Sucess()
         {
             Int64 inputNumber = 3523014;
-            //Int64 inputNumber = 2350;
             bool expectedResult = true;
             AlgoHelper algo = new AlgoHelper();
             bool actualResult = algo.ValidateFriendlyNess(inputNumber);
@@ -44,6 +43,16 @@ namespace _10StringProblem.UnitTest
         {
             Int64 inputNumber = 28546;
             bool expectedResult = false;
+            AlgoHelper algo = new AlgoHelper();
+            bool actualResult = algo.ValidateFriendlyNess(inputNumber);
+            Assert.AreEqual<bool>(expectedResult, actualResult);
+
+        }
+        [TestMethod]
+        public void ValidateFriendlyNumber_RendomTest()
+        {
+            Int64 inputNumber = 190;
+            bool expectedResult = true;
             AlgoHelper algo = new AlgoHelper();
             bool actualResult = algo.ValidateFriendlyNess(inputNumber);
             Assert.AreEqual<bool>(expectedResult, actualResult);

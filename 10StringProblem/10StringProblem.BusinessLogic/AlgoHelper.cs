@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace _10StringProblem.BusinessLogic
 {
-    
+
     /// <summary>
     /// Basic process of Algo 
     /// input Number = iNumber
@@ -47,9 +47,9 @@ namespace _10StringProblem.BusinessLogic
         /// constructor
         /// </summary>
         public AlgoHelper()
-        { 
+        {
             AddMore = false;
-            CurrentSequenceValid = false;   
+            CurrentSequenceValid = false;
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace _10StringProblem.BusinessLogic
         /// <returns></returns>
         public bool ValidateFriendlyNess(long iNumber)
         {
-            int[] arrDigits = iNumber.ToString().Select(o => Convert.ToInt32(o)-48).ToArray();
+            int[] arrDigits = iNumber.ToString().Select(o => Convert.ToInt32(o) - 48).ToArray();
             long iNumberToValidate = arrDigits[0];
             if (arrDigits.Length < 2)//checking double digit only 
                 return false;
@@ -68,7 +68,7 @@ namespace _10StringProblem.BusinessLogic
             for (int i = 1; i < arrDigits.Length; i++)
             {
 
-                iNumberToValidate = Convert.ToInt32(string.Format("{0}{1}", iNumberToValidate , arrDigits[i]));
+                iNumberToValidate = Convert.ToInt32(string.Format("{0}{1}", iNumberToValidate, arrDigits[i]));
                 this.CurrentSequenceValid = false;
 
                 if (isNumberTotalFriendly(iNumberToValidate))
@@ -106,10 +106,10 @@ namespace _10StringProblem.BusinessLogic
         /// <returns></returns>
         public bool isNumberTotalFriendly(Int64 iSubNumber)
         {
-            int result = iSubNumber.ToString().Sum(c => Convert.ToInt32(c)-48);
+            int result = iSubNumber.ToString().Sum(c => Convert.ToInt32(c) - 48);
             if (result == Constants.FriendlyTotal)
                 return true;
-            else if(result<Constants.FriendlyTotal)
+            else if (result < Constants.FriendlyTotal)
             {
                 this.AddMore = true;
                 return false;

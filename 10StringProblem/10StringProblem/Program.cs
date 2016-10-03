@@ -77,6 +77,8 @@ namespace _10StringProblem
             ///remove last comma
             sb.Replace(',',' ',sb.ToString().Length-2,1);
             sb.Append("]");
+            sb.Append(Environment.NewLine);
+            sb.Append("Total count: " + outputValues.Count);
             Console.WriteLine(sb.ToString());
         }
 
@@ -90,12 +92,10 @@ namespace _10StringProblem
             try
             {
                 inputValue = Convert.ToInt64(inputString);
-                for (long i = 0; i < inputValue; i++)
-                {
-                    AlgoHelper helper = new AlgoHelper();
-                    if (helper.ValidateFriendlyNess(i))
-                        outputValues.Add(i);
-                }
+                //brute force - looping all
+                ProcessSelector process = new ProcessSelector();
+                outputValues = process.ProcessBruteForce(inputValue);
+                
             }
             catch (Exception ex)
             {
