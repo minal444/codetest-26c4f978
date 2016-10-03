@@ -39,14 +39,14 @@ namespace _10StringProblem.BusinessLogic
     /// }
     /// 
     /// </summary>
-    public class AlgoHelper
+    public class BruteForceHelper
     {
         private bool AddMore { get; set; }
         private bool CurrentSequenceValid { get; set; }
         /// <summary>
         /// constructor
         /// </summary>
-        public AlgoHelper()
+        public BruteForceHelper()
         {
             AddMore = false;
             CurrentSequenceValid = false;

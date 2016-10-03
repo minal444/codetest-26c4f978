@@ -33,7 +33,7 @@ namespace _10StringProblem.UnitTest
         {
             Int64 inputNumber = 3523014;
             bool expectedResult = true;
-            AlgoHelper algo = new AlgoHelper();
+            BruteForceHelper algo = new BruteForceHelper();
             bool actualResult = algo.ValidateFriendlyNess(inputNumber);
             Assert.AreEqual<bool>(expectedResult, actualResult);
 
@@ -43,7 +43,7 @@ namespace _10StringProblem.UnitTest
         {
             Int64 inputNumber = 28546;
             bool expectedResult = false;
-            AlgoHelper algo = new AlgoHelper();
+            BruteForceHelper algo = new BruteForceHelper();
             bool actualResult = algo.ValidateFriendlyNess(inputNumber);
             Assert.AreEqual<bool>(expectedResult, actualResult);
 
@@ -54,7 +54,7 @@ namespace _10StringProblem.UnitTest
             //TO DO not working with brute force
             Int64 inputNumber = 190;
             bool expectedResult = true;
-            AlgoHelper algo = new AlgoHelper();
+            BruteForceHelper algo = new BruteForceHelper();
             bool actualResult = algo.ValidateFriendlyNess(inputNumber);
             Assert.AreEqual<bool>(expectedResult, actualResult);
 

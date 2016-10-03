@@ -92,10 +92,13 @@ namespace _10StringProblem
             try
             {
                 inputValue = Convert.ToInt64(inputString);
-                //brute force - looping all
+                ////brute force - looping all
+                //ProcessSelector process = new ProcessSelector();
+                //outputValues = process.ProcessBruteForce(inputValue);
+
+                //Custom logic
                 ProcessSelector process = new ProcessSelector();
-                outputValues = process.ProcessBruteForce(inputValue);
-                
+                outputValues = process.ProcessCustomLogic(inputValue);
             }
             catch (Exception ex)
             {

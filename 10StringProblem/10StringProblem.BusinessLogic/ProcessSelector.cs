@@ -18,13 +18,13 @@ namespace _10StringProblem.BusinessLogic
         public List<long> ProcessBruteForce(long inputValue)
         {
             List<long> returnValuesList = new List<long>();
-            AlgoHelper helper;
+            BruteForceHelper helper;
 //#if(DEBUG)
 //            Debug.WriteLine(string.Format("{0}{1}","Start Time: ", DateTime.Now));
 //#endif 
             for (long i = 0; i < inputValue; i++)
             {
-                helper = new AlgoHelper();
+                helper = new BruteForceHelper();
                 if (helper.ValidateFriendlyNess(i))
                     returnValuesList.Add(i);
             }
@@ -39,7 +39,9 @@ namespace _10StringProblem.BusinessLogic
         /// <summary>
         /// Process request with custom Logic
         /*
-          
+         * find two digit friendly number by bruteforce 
+         * take each putput value
+         * Add 0 in butween 
          */
         /// </summary>
         /// <param name="inputValue"></param>
@@ -47,7 +49,15 @@ namespace _10StringProblem.BusinessLogic
         public List<long> ProcessCustomLogic(long inputValue)
         {
             List<long> returnValuesList = new List<long>();
-            return returnValuesList;
+            returnValuesList = ProcessBruteForce(inputValue<100?inputValue:100);
+            if (inputValue <= 100)
+                return returnValuesList;
+            else
+            {
+                CustomAlgoHelper myAlgo = new CustomAlgoHelper(inputValue, returnValuesList);
+                returnValuesList.AddRange(myAlgo.GenerateAllPossibleCombination());
+                return returnValuesList;
+            }
         }
 
     }

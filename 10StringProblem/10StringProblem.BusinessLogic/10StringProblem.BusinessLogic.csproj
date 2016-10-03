@@ -39,7 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgoHelper.cs" />
+    <Compile Include="CustomAlgoHelper.cs" />
+    <Compile Include="BruteForceHelper.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ProcessSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
