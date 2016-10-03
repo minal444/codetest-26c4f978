@@ -9,18 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10StringProblem.UnitTest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10StringProblem.BusinessLogic", "10StringProblem.BusinessLogic\10StringProblem.BusinessLogic.csproj", "{B2952DEC-2458-48DC-B5CE-8BAC1D437928}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Executable", "Executable", "{4561CF2B-3C88-4550-8C63-36A865D0E43D}"
-	ProjectSection(SolutionItems) = preProject
-		10StringProblem\bin\Release\10StringProblem.BusinessLogic.dll = 10StringProblem\bin\Release\10StringProblem.BusinessLogic.dll
-		10StringProblem\bin\Release\10StringProblem.BusinessLogic.pdb = 10StringProblem\bin\Release\10StringProblem.BusinessLogic.pdb
-		10StringProblem\bin\Release\10StringProblem.exe = 10StringProblem\bin\Release\10StringProblem.exe
-		10StringProblem\bin\Release\10StringProblem.exe.config = 10StringProblem\bin\Release\10StringProblem.exe.config
-		10StringProblem\bin\Release\10StringProblem.pdb = 10StringProblem\bin\Release\10StringProblem.pdb
-		10StringProblem\bin\Release\10StringProblem.vshost.exe = 10StringProblem\bin\Release\10StringProblem.vshost.exe
-		10StringProblem\bin\Release\10StringProblem.vshost.exe.config = 10StringProblem\bin\Release\10StringProblem.vshost.exe.config
-		10StringProblem\bin\Release\10StringProblem.vshost.exe.manifest = 10StringProblem\bin\Release\10StringProblem.vshost.exe.manifest
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
