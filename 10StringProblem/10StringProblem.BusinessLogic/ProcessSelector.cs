@@ -12,7 +12,6 @@ namespace _10StringProblem.BusinessLogic
 
         /// <summary>
         /// Process input value with bruteforce
-        /// 
         /// </summary>
         /// <param name="inputValue"></param>
         /// <returns></returns>
@@ -37,7 +36,19 @@ namespace _10StringProblem.BusinessLogic
             return returnValuesList;
         }
 
-        
+        /// <summary>
+        /// Process request with custom Logic
+        /*
+          
+         */
+        /// </summary>
+        /// <param name="inputValue"></param>
+        /// <returns></returns>
+        public List<long> ProcessCustomLogic(long inputValue)
+        {
+            List<long> returnValuesList = new List<long>();
+            return returnValuesList;
+        }
 
     }
 

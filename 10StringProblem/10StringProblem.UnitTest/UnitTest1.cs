@@ -51,6 +51,7 @@ namespace _10StringProblem.UnitTest
         [TestMethod]
         public void ValidateFriendlyNumber_RendomTest()
         {
+            //TO DO not working with brute force
             Int64 inputNumber = 190;
             bool expectedResult = true;
             AlgoHelper algo = new AlgoHelper();
