@@ -12,6 +12,7 @@ namespace _10StringProblem
         protected static string inputString; //input variable
         protected static long inputValue; //input variable after converting to Int64
         protected static List<long> outputValues = new List<long>(); //output values for print
+        protected static int selectedAlgorithum = 2; //output values for print
         /// <summary>
         /// Console Main
         /// </summary>
@@ -31,6 +32,19 @@ namespace _10StringProblem
                 if (ValidateInput(inputString))
                 {
                     //process request if input is valid
+                    Console.WriteLine("--------------------------------------------------");
+                    Console.WriteLine("Select Algorithm (Default will be [2])");
+                    Console.WriteLine("[1]Brute Force - Loop all possible combination");
+                    Console.WriteLine("[2]Custom Logic - Generate possible combination");
+                    Console.WriteLine("--------------------------------------------------");
+                    if (Console.ReadKey(true).Key == ConsoleKey.D1)
+                    {
+                        selectedAlgorithum = 1;
+                        Console.WriteLine("Brute Force selected");
+                    }
+                    else
+                        Console.WriteLine("Custom Logic selected");
+                    Console.WriteLine("--------------------------------------------------");
                     ProcessRequest();
                 }
                 PrintOutput();
@@ -75,7 +89,8 @@ namespace _10StringProblem
 
             }
             ///remove last comma
-            sb.Replace(',',' ',sb.ToString().Length-2,1);
+            if(sb.ToString().Contains(","))
+                sb.Replace(',',' ',sb.ToString().Length-2,1);
             sb.Append("]");
             sb.Append(Environment.NewLine);
             sb.Append("Total count: " + outputValues.Count);
@@ -93,12 +108,11 @@ namespace _10StringProblem
             {
                 inputValue = Convert.ToInt64(inputString);
                 ////brute force - looping all
-                //ProcessSelector process = new ProcessSelector();
-                //outputValues = process.ProcessBruteForce(inputValue);
-
-                //Custom logic
                 ProcessSelector process = new ProcessSelector();
-                outputValues = process.ProcessCustomLogic(inputValue);
+                if(selectedAlgorithum==1)
+                    outputValues = process.ProcessBruteForce(inputValue);
+                else//Custom logic
+                    outputValues = process.ProcessCustomLogic(inputValue);
             }
             catch (Exception ex)
             {
